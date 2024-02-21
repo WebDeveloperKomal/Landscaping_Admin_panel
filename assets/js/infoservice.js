@@ -24,7 +24,7 @@ function saveData() {
     formData.append('image1File', formData.get('image1'));
     formData.append('image2File', formData.get('image2'));
 
-    fetch('http://localhost:8181/ibg-infotech/auth/save-services', {
+    fetch('http://localhost:8181/Gardener/auth/save-services', {
         method: 'POST',
         body: formData,
         headers: {
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', getData);
 function getData() {
     var jwtToken = localStorage.getItem('jwtToken');
 
-    fetch('http://localhost:8181/ibg-infotech/auth/get-all-services', {
+    fetch('http://localhost:8181/Gardener/auth/get-all-services', {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + jwtToken,
@@ -126,7 +126,7 @@ function populateTable(data) {
                 const id = editBtn.getAttribute('data-id');
                 console.log("Edit button clicked for ID: " + id);
 
-                fetch(`http://localhost:8181/ibg-infotech/auth/get-services/${id}`, {
+                fetch(`http://localhost:8181/Gardener/auth/get-services/${id}`, {
                     method: 'GET',
                     headers: {
                         'Authorization': 'Bearer ' + jwtToken,
@@ -167,7 +167,7 @@ function populateTable(data) {
 function deleteService(id) {
     var jwtToken = localStorage.getItem('jwtToken');
 
-    fetch(`http://localhost:8181/ibg-infotech/auth/delete-services/${id}`, {
+    fetch(`http://localhost:8181/Gardener/auth/delete-services/${id}`, {
         method: 'DELETE',
         headers: {
             'Authorization': 'Bearer ' + jwtToken,
@@ -235,7 +235,7 @@ function updateData() {
     }
 
     // Configure the fetch request
-    var url = 'http://localhost:8181/ibg-infotech/auth/update-services/' + id;
+    var url = 'http://localhost:8181/Gardener/auth/update-services/' + id;
     var options = {
         method: 'PUT',
         body: formData,

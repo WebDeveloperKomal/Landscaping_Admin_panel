@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', getData);
 function getData() {
     var jwtToken = localStorage.getItem('jwtToken');
 
-    fetch('http://localhost:8181/ibg-infotech/auth/get-all-home-content', {
+    fetch('http://localhost:8181/Gardener/auth/get-all-home-content', {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + jwtToken,
@@ -67,7 +67,7 @@ function populateTable(data) {
                 const id = editBtn.getAttribute('data-id');
                 console.log("Edit button clicked for ID: " + id);
 
-                fetch(`http://localhost:8181/ibg-infotech/auth/get-home-content/${id}`, {
+                fetch(`http://localhost:8181/Gardener/auth/get-home-content/${id}`, {
                     method: 'GET',
                     headers: {
                         'Authorization': 'Bearer ' + jwtToken,
@@ -107,7 +107,7 @@ function populateTable(data) {
 function deleteContent(id) {
     jwtToken = localStorage.getItem('jwtToken');
 
-    fetch(`http://localhost:8181/ibg-infotech/auth/delete-home-content/${id}`, {
+    fetch(`http://localhost:8181/Gardener/auth/delete-home-content/${id}`, {
         method: 'DELETE',
         headers: {
             'Authorization': 'Bearer ' + jwtToken,
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const id = urlParams.get('id');
 
 
-    fetch(`http://localhost:8181/ibg-infotech/auth/get-home-content/${id}`, {
+    fetch(`http://localhost:8181/Gardener/auth/get-home-content/${id}`, {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + jwtToken,
@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function updateHomeContent(id, text, text1, text2, facts, facts_text, nations, members, awards, satisfied_customer, middle_text, middle_text1, cus_review, cus_review_text) {
     const jwtToken = localStorage.getItem('jwtToken');
 
-    fetch(`http://localhost:8181/ibg-infotech/auth/update-home-content/${id}`, {
+    fetch(`http://localhost:8181/Gardener/auth/update-home-content/${id}`, {
         method: 'PUT',
         headers: {
             'Authorization': 'Bearer ' + jwtToken,

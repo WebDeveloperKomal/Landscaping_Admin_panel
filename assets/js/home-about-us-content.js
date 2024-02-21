@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', getData);
 function getData() {
     var jwtToken = localStorage.getItem('jwtToken');
 
-    fetch('http://localhost:8181/ibg-infotech/auth/get-all-home-about', {
+    fetch('http://localhost:8181/Gardener/auth/get-all-home-about', {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + jwtToken,
@@ -67,7 +67,7 @@ function populateTable(data) {
                 const id = editBtn.getAttribute('data-id');
                 console.log("Edit button clicked for ID: " + id);
 
-                fetch(`http://localhost:8181/ibg-infotech/auth/get-home-about/${id}`, {
+                fetch(`http://localhost:8181/Gardener/auth/get-home-about/${id}`, {
                     method: 'GET',
                     headers: {
                         'Authorization': 'Bearer ' + jwtToken,
@@ -108,7 +108,7 @@ function populateTable(data) {
 function deleteAboutContent(id) {
     var jwtToken = localStorage.getItem('jwtToken');
 
-    fetch(`http://localhost:8181/ibg-infotech/auth/delete-home-about/${id}`, {
+    fetch(`http://localhost:8181/Gardener/auth/delete-home-about/${id}`, {
         method: 'DELETE',
         headers: {
             'Authorization': 'Bearer ' + jwtToken,
@@ -184,7 +184,7 @@ function updateData() {
         formData.append('imageFile', imageFile);
     }
 
-    fetch(`http://localhost:8181/ibg-infotech/auth/update-home-about/${id}`, {
+    fetch(`http://localhost:8181/Gardener/auth/update-home-about/${id}`, {
         method: 'PUT',
         body: formData,
         headers: {

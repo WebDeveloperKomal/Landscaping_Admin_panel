@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', getData);
 function getData() {
     var jwtToken = localStorage.getItem('jwtToken');
 
-    fetch('http://localhost:8181/ibg-infotech/auth/get-all-home-slider', {
+    fetch('http://localhost:8181/Gardener/auth/get-all-home-slider', {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + jwtToken,
@@ -68,7 +68,7 @@ function populateTable(data) {
                 const id = this.getAttribute('data-id'); // Use 'this' instead of 'editBtn'
                 console.log("Edit button clicked for ID:" + id);
 
-                fetch(`http://localhost:8181/ibg-infotech/auth/slider-data/${id}`, {
+                fetch(`http://localhost:8181/Gardener/auth/slider-data/${id}`, {
                     method: 'GET',
                     headers: {
                         'Authorization': 'Bearer ' + jwtToken,
@@ -113,7 +113,7 @@ function populateTable(data) {
 function deleteHomeSlider(id) {
     var jwtToken = localStorage.getItem('jwtToken');
 
-    fetch(`http://localhost:8181/ibg-infotech/auth/delete-slider/${id}`, {
+    fetch(`http://localhost:8181/Gardener/auth/delete-slider/${id}`, {
         method: 'DELETE',
         headers: {
             'Authorization': 'Bearer ' + jwtToken,
@@ -191,7 +191,7 @@ function updateData() {
         formData.append('image', imageFile);
     }
 
-    fetch(`http://localhost:8181/ibg-infotech/auth/update-slider/${id}`, {
+    fetch(`http://localhost:8181/Gardener/auth/update-slider/${id}`, {
         method: 'PUT',
         body: formData,
         headers: {

@@ -47,7 +47,7 @@ function saveData() {
         return;
     }
 
-    fetch('http://localhost:8181/ibg-infotech/auth/save-home-about', {
+    fetch('http://localhost:8181/Gardener/auth/save-home-about', {
         method: 'POST',
         body: formData,
         headers: {

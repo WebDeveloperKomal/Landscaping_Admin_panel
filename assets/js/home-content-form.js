@@ -32,7 +32,7 @@ function HomeContentsave() {
         return;
     }
 
-    fetch('http://localhost:8181/ibg-infotech/auth/save-home-content', {
+    fetch('http://localhost:8181/Gardener/auth/save-home-content', {
         method: 'POST',
         body: JSON.stringify(HomeContentsave),
         headers: {

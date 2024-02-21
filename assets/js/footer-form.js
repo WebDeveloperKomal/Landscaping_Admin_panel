@@ -25,7 +25,7 @@ function saveData() {
         return;
     }
 
-    fetch('http://localhost:8181/ibg-infotech/auth/save-footer', {
+    fetch('http://localhost:8181/Gardener/auth/save-footer', {
         method: 'POST',
         body: formData,
         headers: {
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', getData);
 function getData() {
     var jwtToken = localStorage.getItem('jwtToken');
 
-    fetch('http://localhost:8181/ibg-infotech/auth/get-all-footer', {
+    fetch('http://localhost:8181/Gardener/auth/get-all-footer', {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + jwtToken,
@@ -131,7 +131,7 @@ function populateTable(data) {
                 const id = editBtn.getAttribute('data-id');
                 console.log("Edit button clicked for ID: " + id);
                 // Fetch data for the selected item
-                fetch(`http://localhost:8181/ibg-infotech/auth/get-home-footer/${id}`, {
+                fetch(`http://localhost:8181/Gardener/auth/get-home-footer/${id}`, {
                     method: 'GET',
                     headers: {
                         'Authorization': 'Bearer ' + jwtToken,
@@ -173,7 +173,7 @@ function populateTable(data) {
 function deleteService(id) {
     var jwtToken = localStorage.getItem('jwtToken');
 
-    fetch(`http://localhost:8181/ibg-infotech/auth/delete-footer/${id}`, {
+    fetch(`http://localhost:8181/Gardener/auth/delete-footer/${id}`, {
         method: 'DELETE',
         headers: {
             'Authorization': 'Bearer ' + jwtToken,
@@ -244,7 +244,7 @@ function updateData() {
     }
 
     // Send the update request to the server
-    fetch(`http://localhost:8181/ibg-infotech/auth/update-home-footer/${id}`, {
+    fetch(`http://localhost:8181/Gardener/auth/update-home-footer/${id}`, {
         method: 'PUT',
         body: formData,
         headers: {

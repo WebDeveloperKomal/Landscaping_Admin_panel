@@ -23,7 +23,7 @@ function saveData() {
         return;
     }
 
-    fetch('http://localhost:8181/ibg-infotech/auth/save-contact-us', {
+    fetch('http://localhost:8181/Gardener/auth/save-contact-us', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', getData);
 function getData() {
     var jwtToken = localStorage.getItem('jwtToken');
 
-    fetch('http://localhost:8181/ibg-infotech/auth/get-all-contact-us', {
+    fetch('http://localhost:8181/Gardener/auth/get-all-contact-us', {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + jwtToken,
@@ -136,7 +136,7 @@ function populateTable(data) {
                 const id = editBtn.getAttribute('data-id');
                 console.log("Edit button clicked for ID: " + id);
 
-                fetch(`http://localhost:8181/ibg-infotech/auth/get-contact-us/${id}`, {
+                fetch(`http://localhost:8181/Gardener/auth/get-contact-us/${id}`, {
                     method: 'GET',
                     headers: {
                         'Authorization': 'Bearer ' + jwtToken,
@@ -179,7 +179,7 @@ function populateTable(data) {
 function deleteService(id) {
     var jwtToken = localStorage.getItem('jwtToken');
 
-    fetch(`http://localhost:8181/ibg-infotech/auth/delete-contact-us/${id}`, {
+    fetch(`http://localhost:8181/Gardener/auth/delete-contact-us/${id}`, {
         method: 'DELETE',
         headers: {
             'Authorization': 'Bearer ' + jwtToken,
@@ -248,7 +248,7 @@ function updateData() {
         phone: phone
     };
 
-    fetch(`http://localhost:8181/ibg-infotech/auth/update-contact-us/${id}`, {
+    fetch(`http://localhost:8181/Gardener/auth/update-contact-us/${id}`, {
         method: 'PUT',
         body: JSON.stringify(data),
         headers: {

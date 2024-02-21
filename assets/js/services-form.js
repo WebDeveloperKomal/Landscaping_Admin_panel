@@ -24,7 +24,7 @@ function saveData() {
         return;
     }
 
-    fetch('http://localhost:8181/ibg-infotech/auth/save-services-content', {
+    fetch('http://localhost:8181/Gardener/auth/save-services-content', {
         method: 'POST',
         body: new URLSearchParams(saveData), // Convert object to URLSearchParams
         headers: {

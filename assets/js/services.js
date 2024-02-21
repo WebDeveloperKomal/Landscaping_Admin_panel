@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', getData);
 function getData() {
     var jwtToken = localStorage.getItem('jwtToken');
 
-    fetch('http://localhost:8181/ibg-infotech/auth/get-all-services-content', {
+    fetch('http://localhost:8181/Gardener/auth/get-all-services-content', {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + jwtToken,
@@ -50,7 +50,7 @@ function populateTable(data) {
                 const id = editBtn.getAttribute('data-id');
                 console.log("Edit button clicked for ID: " + id);
                 // Redirect to update-service.html and pass data as query parameters
-                fetch(`http://localhost:8181/ibg-infotech/auth/get-services-content/${id}`, {
+                fetch(`http://localhost:8181/Gardener/auth/get-services-content/${id}`, {
                     method: 'GET',
                     headers: {
                         'Authorization': 'Bearer ' + jwtToken,
@@ -87,7 +87,7 @@ function populateTable(data) {
 function deleteService(id) {
     var jwtToken = localStorage.getItem('jwtToken');
 
-    fetch(`http://localhost:8181/ibg-infotech/auth/delete-services-content/${id}`, {
+    fetch(`http://localhost:8181/Gardener/auth/delete-services-content/${id}`, {
         method: 'DELETE',
         headers: {
             'Authorization': 'Bearer ' + jwtToken,
@@ -137,7 +137,7 @@ function updateData() {
 function updateService(id, name, title, information) {
     var jwtToken = localStorage.getItem('jwtToken');
 
-    fetch(`http://localhost:8181/ibg-infotech/auth/update-services-content/${id}?name=${name}&title=${title}&information=${information}`, {
+    fetch(`http://localhost:8181/Gardener/auth/update-services-content/${id}?name=${name}&title=${title}&information=${information}`, {
         method: 'PUT',
         headers: {
             'Authorization': 'Bearer ' + jwtToken,

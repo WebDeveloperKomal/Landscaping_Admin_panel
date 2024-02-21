@@ -35,7 +35,7 @@ function saveData() {
         return;
     }
 
-    fetch('http://localhost:8181/ibg-infotech/auth/save-gallery', {
+    fetch('http://localhost:8181/Gardener/auth/save-gallery', {
         method: 'POST',
         body: formData,
         headers: {
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', getData);
 function getData() {
     var jwtToken = localStorage.getItem('jwtToken');
 
-    fetch('http://localhost:8181/ibg-infotech/auth/get-all-galleries', {
+    fetch('http://localhost:8181/Gardener/auth/get-all-galleries', {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + jwtToken,
@@ -150,7 +150,7 @@ function populateTable(data) {
                 const id = editBtn.getAttribute('data-id');
                 console.log("Edit button clicked for ID:" + id);
 
-                fetch(`http://localhost:8181/ibg-infotech/auth/get-gallery/${id}`, {
+                fetch(`http://localhost:8181/Gardener/auth/get-gallery/${id}`, {
                     method: 'GET',
                     headers: {
                         'Authorization': 'Bearer ' + jwtToken,
@@ -205,7 +205,7 @@ function deleteGallery(id) {
     }
 
 
-    fetch(`http://localhost:8181/ibg-infotech/auth/delete-gallery/${id}`, {
+    fetch(`http://localhost:8181/Gardener/auth/delete-gallery/${id}`, {
         method: 'DELETE',
         headers: {
             'Authorization': 'Bearer ' + jwtToken,
@@ -279,7 +279,7 @@ function updateData() {
     }
 
 
-    fetch(`http://localhost:8181/ibg-infotech/auth/update-gallery/${id}`, {
+    fetch(`http://localhost:8181/Gardener/auth/update-gallery/${id}`, {
         method: 'PUT',
         body: formData,
         headers: {

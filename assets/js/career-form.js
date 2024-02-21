@@ -30,7 +30,7 @@ function saveData() {
 
     console.log('Request Data:', formData);
 
-    fetch('http://localhost:8181/ibg-infotech/auth/save-career-form', {
+    fetch('http://localhost:8181/Gardener/auth/save-career-form', {
         method: 'POST',
         body: formData,
         headers: {
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', getData);
 function getData() {
     var jwtToken = localStorage.getItem('jwtToken');
 
-    fetch('http://localhost:8181/ibg-infotech/auth/get-all-career-forms', {
+    fetch('http://localhost:8181/Gardener/auth/get-all-career-forms', {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + jwtToken,
@@ -140,7 +140,7 @@ function populateTable(data) {
                 const id = editBtn.getAttribute('data-id');
                 console.log("Edit button clicked for ID: " + id);
                 // Fetch data for the selected item
-                fetch(`http://localhost:8181/ibg-infotech/auth/get-career-form/${id}`, {
+                fetch(`http://localhost:8181/Gardener/auth/get-career-form/${id}`, {
                     method: 'GET',
                     headers: {
                         'Authorization': 'Bearer ' + jwtToken,
@@ -187,7 +187,7 @@ function padZero(num) {
 function deleteService(id) {
     var jwtToken = localStorage.getItem('jwtToken');
 
-    fetch(`http://localhost:8181/ibg-infotech/auth/delete-career-form/${id}`, {
+    fetch(`http://localhost:8181/Gardener/auth/delete-career-form/${id}`, {
         method: 'DELETE',
         headers: {
             'Authorization': 'Bearer ' + jwtToken,
@@ -258,7 +258,7 @@ function updateData() {
 
     console.log('Request Data:', formData);
 
-    fetch('http://localhost:8181/ibg-infotech/auth/update-career-form/' + id, {
+    fetch('http://localhost:8181/Gardener/auth/update-career-form/' + id, {
         method: 'PUT',
         body: formData,
         headers: {

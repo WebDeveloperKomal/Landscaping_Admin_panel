@@ -48,7 +48,7 @@ function saveData() {
         return;
     }
 
-    fetch('http://localhost:8181/ibg-infotech/auth/add-new-slider', {
+    fetch('http://localhost:8181/Gardener/auth/add-new-slider', {
         method: 'POST',
         body: formData,
         headers: {
