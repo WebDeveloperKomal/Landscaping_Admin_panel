@@ -10,7 +10,7 @@ function getAuthToken() {
     headers.append('Content-Type', 'application/json');
     headers.append('Accept', 'application/json');
 
-    fetch("http://localhost:8181/Gardener/user/login", {
+    fetch("http://localhost:2222/user/login", {
         method: 'POST',
         body: JSON.stringify(userCredentials),
         headers: headers,

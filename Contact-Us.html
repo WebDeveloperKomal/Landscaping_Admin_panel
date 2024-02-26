@@ -9,6 +9,7 @@
     <meta name="robots" content="noindex, nofollow">
     <meta content="" name="description">
     <meta content="" name="keywords">
+    
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="assets\js\add-contact-us.js"></script>
@@ -242,14 +243,14 @@
                 <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="assets/image/Home/WhatsApp Image 2024-02-17 at 4.18.58 PM.jpeg" alt="Profile"
+                        <img src="assets/image/Home/images.jpg" alt="Profile"
                             class="rounded-circle">
-                        <span class="d-none d-md-block dropdown-toggle ps-2">Khushal Patil</span>
+                        <span class="d-none d-md-block dropdown-toggle ps-2">Praniket Patil</span>
                     </a><!-- End Profile Iamge Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6>Khushal Patil</h6>
+                            <h6>Praniket Patil</h6>
                             <span>Full Stack Developer</span>
                         </li>
                         <li>
@@ -534,14 +535,7 @@
                             <!-- Page-body start -->
                             <div class="card">
                                 <div class="card-header">
-                                    <h5>Contact</h5>
-
-
-                                    <a class="btn"
-                                        style="background-color: #e8f5e9; border-color: #348e38; color: #000000;"
-                                        href="Add-contact us.html"><i style="color: #348e38;"
-                                            class="icofont icofont-plus"></i>Add
-                                        Contact List</a>
+                                    <h5>All Contact List</h5>
 
                                     <div class="card-header-right">
                                         <ul class="list-unstyled card-option">
@@ -562,7 +556,8 @@
                                         <table class="table">
                                             <thead>
                                                 <tr>
-                                                    <th style="color: #0F4229;">sr no.</th>
+                                                    <th style="color: #0F4229;">Sr No.</th>
+                                                    <th style="color: #0F4229;">ID</th>
                                                     <th style="color: #0F4229;">Name</th>
                                                     <th style="color: #0F4229;">Email</th>
                                                     <th style="color: #0F4229;">Contact Number</th>
@@ -571,39 +566,14 @@
                                                     <th style="color: #0F4229;">Action</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">1</th>
-                                                    <td style="color: #0F4229;">Khushal</td>
-                                                    <td style="color: #0F4229;">kjdfghgkjf</td>
-                                                    <td style="color: #0F4229;">788888888888</td>
-                                                    <td style="color: #0F4229;">DEMO</td>
-                                                    <td style="color: #0F4229;">Hello</td>
-
-
-                                                    <td style="color: #0F4229;"><a
-                                                            href="Update-about-us-achievement.html" class="waves-effect"
-                                                            data-toggle="tooltip" data-placement="top" title=""
-                                                            data-original-title="Edit Testimonial"><i
-                                                                class="ti-pencil"></i>
-                                                            Edit</a>
-
-
-                                                        <a href="javascript:void(0);" class="waves-effect delete_entry"
-                                                            data-toggle="tooltip" data-placement="top" title=""
-                                                            data-original-title="Delete Testimonial" data-id="17"
-                                                            data-table="testimonials"><i class="ti-trash"></i>
-                                                            Delete</a>
-                                                    </td>
-
-
-                                                </tr>
-
-
+                                            <tbody id="dataTableBody">
+                                                <!-- Table rows will be dynamically added here -->
                                             </tbody>
                                         </table>
                                     </div>
                                 </div>
+
+                                
                             </div>
                         </div>
                     </div>
